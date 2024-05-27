@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<panel
+border="false"
+follows="left|top|right|bottom"
+height="408"
+label="Privacy"
+layout="topleft"
+left="102"
+name="privacy"
+top="45"
+width="510">
+<panel.string
+name="log_in_to_change">
+log in to change
+</panel.string>
+<panel
+follows="left|top|right"
+height="20"
+bg_visible="true"
+bg_alpha_color="0.10 0.43 0.77 0.28"
+layout="topleft"
+mouse_opaque="false"
+left="1"
+name="title"
+top="1"
+width="508"/>
+ <text
+ type="string"
+ length="1"
+ follows="top|left"
+ height="12"
+ layout="topleft"
+ left="10"
+ name="tell_me_label"
+ top_delta="4"
+ width="300">
+ Privacy Options:
+ </text>
+ <button
+ height="18"
+ layout="topleft"
+ top_delta="-3"
+ left_pad="85"
+ name="clear_web_cache"
+ tool_tip="This option clears the last location, teleport history, web, and texture cache."
+ image_overlay_alignment="left"
+ image_overlay="TrashItem_Off"
+ halign="right"
+ pad_bottom="0"
+ image_selected="Transparent"
+ image_unselected="Transparent"
+ label="⌊Clear History⌉"
+ width="107">
+ <button.commit_callback
+ function="Pref.WebClearCache" />
+ </button>
+ 
+ <check_box
+ height="16"
+ label="Show me in Search results"
+ tool_tip="This options toggles whether your name should appear in the Second Life search for others to be found or not."
+ layout="topleft"
+ left="10"
+ name="online_searchresults"
+ top_pad="12"
+ width="350" />
+ <check_box
+ height="16"
+ label="Only friends and groups know I'm online"
+ tool_tip="This option toggles whether anyone outside of your joined groups or your friendlist can see your online status in your profile."
+ layout="topleft"
+ left_delta="0"
+ name="online_visibility"
+ top_pad="0"
+ width="350" />
+ <check_box
+ control_name="VoiceCallsFriendsOnly"
+ height="16"
+ label="Only friends and groups can call or IM me"
+ tool_tip="This option toggles whether anyone outside of your joined groups or your friendlist can IM or call you."
+ layout="topleft"
+ left_delta="0"
+ name="voice_call_friends_only_check"
+ top_pad="0"
+ width="350" />
+ <check_box
+ control_name="ShowFavoritesOnLogin"
+ height="16"
+ layout="topleft"
+ label="Show my Favorite Landmarks at Login (via &apos;Start At&apos; drop-down menu)"
+ tool_tip="This option toggles whether you want to show the favorite places from your last used account in the login panel 'Start Location' dropdown."
+ left_delta="0"
+ name="favorites_on_login_check"
+ top_pad="0"
+ width="490" />
+ <check_box
+ control_name="QuietSnapshotsToDisk"
+ height="16"
+ initial_value="true"
+ label="Private Snapshots (Quiet Snapshot to Disk)"
+ tool_tip="This option toggles whether you want the Viewer to allow playing a sound and animation to everyone whenever you take a snapshot."
+ layout="topleft"
+ left_delta="0"
+ name="QuietSnapshotsToDisk"
+ top_pad="0"
+ width="350" />
+ 
+</panel>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<floater name="objectcontents" title="INHALT DES OBJEKTS">
+	<text name="object_name">
+		[DESC]:
+	</text>
+	<text name="border_note">
+		In Inventar kopieren und tragen
+	</text>
+	<button label="Hinzufügen" name="copy_and_wear_button"/>
+	<button label="Ersetzen" name="copy_and_replace_button"/>
+	<button label="Kopieren" name="copy_to_inventory_button"/>
+	<button label="Abbrechen" name="cancel_button"/>
+</floater>

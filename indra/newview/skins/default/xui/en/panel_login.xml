@@ -1,0 +1,2535 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<panel
+follows="all"
+height="600"
+layout="topleft"
+left="0"
+name="panel_login"
+focus_root="false" 
+top="600"
+width="996">
+ <panel.string name="create_account_url">
+ http://join.secondlife.com/
+ </panel.string>
+ <string name="reg_in_client_url" translate="false">
+ http://secondlife.eniac15.lindenlab.com/reg-in-client/
+ </string>
+ <panel.string name="forgot_password_url">
+ http://secondlife.com/account/request.php
+ </panel.string>
+ <web_browser
+ tab_stop="false" 
+ trusted_content="true" 
+ bg_opaque_color="Black"
+ border_visible="false"
+ top="-600"
+ follows="all"
+ start_url="https://www.youtube.com/embed/2WhAf1Z9wZs?autoplay=1&amp;loop=1&amp;playlist=2WhAf1Z9wZs&amp;hl=He"
+ left="0"
+ name="html"
+ height="650"
+ width="996" />
+ <icon
+ follows="bottom|left|right"
+ height="125"
+ image_name="Toolbar_Middle_Selected"
+ color="0.15 0.05 0 1"
+ layout="topleft"
+ name="login_bg"
+ mouse_opaque="false"
+ visible="true"
+ width="996"
+ left="0"
+ top="-125"/>
+ <icon
+ follows="bottom|left|right"
+ height="125"
+ image_name="Toolbar_Middle_Selected"
+ color="0 0 0 1"
+ layout="topleft"
+ name="login_bg"
+ mouse_opaque="false"
+ visible="true"
+ width="996"
+ left="0"
+ top="-125"/>
+ <icon
+ follows="top|left|right"
+ height="20"
+ image_name="Toolbar_Middle_Selected"
+ color="0 0 0 1"
+ layout="topleft"
+ name="login_bg"
+ mouse_opaque="false"
+ visible="true"
+ width="996"
+ left="0"
+ top="0"/>
+ <icon
+ follows="top|left|right"
+ height="20"
+ image_name="Toolbar_Middle_Selected"
+ color="0.15 0.05 0 1"
+ layout="topleft"
+ name="login_bg"
+ mouse_opaque="false"
+ visible="true"
+ width="996"
+ left="0"
+ top="0"/>
+ <view_border
+ bevel_style="in"
+ follows="top|left|right"
+ height="1"
+ layout="topleft"
+ left="1"
+ name="cost_text_border"
+ top="20"
+ width="994"/>
+ <button
+ follows="left|top|right"
+ height="20"
+ image_unselected="transparentj2c"
+ image_selected="transparentj2c"
+ label="[CHANNEL] [VERSION] - [[VIEWER_VERSION_LOCAL] - [VIEWER_VERSION_IDENTIFIER]]"
+ font="SansSerifSmall"
+ layout="topleft"
+ left="3"
+ halign="left"
+ name="channel_text"
+ top="1"
+ width="994">
+ <button.commit_callback
+ function="Floater.Show"
+ parameter="sl_about"/>
+ </button>
+ <panel
+ follows="bottom|left|right"
+ height="23"
+ background_visible="true"
+ bg_alpha_color="0.5 0.2 0.2 0.35"
+ layout="topleft"
+ left="0"
+ name="intel_warning_panel"
+ bottom="-6"
+ width="994">
+ <text
+ follows="left|top|right"
+ font="SansSerifBig"
+ font_shadow="soft"
+ font.style="BOLD"
+ halign="center"
+ height="20"
+ top="3"
+ left="0"
+ name="intel_warning_text"
+ width="994"
+ word_wrap="false">
+ &lt;red&gt;Intel Graphics Card detected&lt;/red&gt;                                            Performance will be impacted.
+ </text>
+ </panel>
+ <layout_stack
+ border_size="0"
+ follows="all"
+ height="445"
+ left="0"
+ mouse_opaque="true"
+ name="login_stack"
+ orientation="vertical"
+ top="20"
+ width="998">
+  <layout_panel
+  auto_resize="true"
+  visibility_control="ShowChangelogs"
+  follows="all"
+  height="490"
+  layout="topleft"
+  mouse_opaque="true"
+  name="info_panel"
+  top_pad="0"
+  width="998">
+   <scroll_container
+   color="Transparent"
+   follows="all"
+   layout="topleft"
+   mouse_opaque="false"
+   left="0"
+   name="login_scroll"
+   opaque="false"
+   height="487"
+   width="994"
+   top="3">
+    <panel
+    follows="top|left"
+    height="9999"
+    layout="topleft"
+    mouse_opaque="false"
+    left="0"
+    name="login_scroll_panel"
+    top="0"
+    width="980">
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="247"
+     top="10"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Changed: Handling of disabled tabs and switching out to enabled tabs.
+Changed: Animation Creator window layout.
+Changed: Make changing rotations/position of a bone automatically add a keyframe if we do not have one selected already.
+Changed: Made Automatic Duration automatically refresh the duration slider.
+Changed: Made Automatic Duration automatically set the Loop Out time to the duration of the animation.
+Changed: Disabled Scaling on skeleton bones, they are ignored on upload.
+Changed: Switched all timings in keyframes to frames instead of seconds and automatically convert it to seconds internally.
+Changed: Port enable/disable tab improvements to Poser.
+Changed: Version to 4.3.2.
+Added: Several descriptive texts to the animation main options to give hints what they do.
+Added: Option to add multisliders to scrolllists which can have keyframes added/removed.
+Added: Some logging to animation exporting.
+Added: Extra crash protection against bad animation imports and faulty pointers.
+Added: Ari H as Patreon patron.
+Fixed: Mirror Changes does not work for the pose creator, it will now automatically create a keyframe.
+Fixed: (POTENTIAL) Animations getting corrupted under unknown circumstances.
+Fixed: Ease In and Ease Out reverting back to the original in-file values on upload.
+Fixed: Double-creation of the first keyframe in Position and Scale keyframes.
+Misc: More warnings for when something breaks.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.3.1
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="286"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Bunny as Patreon patron.
+Added: Muraverse Online as Patreon patron.
+Added: NH's Marketplace and inworld store link
+Added: Tamara S as Patreon patron.
+Added: First full keyframe animation editor window allowing to add, remove and edit keyframes for bones.
+Added: Option to change keyframe time and interpoltion method for the selected bone.
+Added: Option to preview the current WIP animation temporarily.
+Added: Multi/Mass add keyframe option.
+Added: Michelita Smith as Patreon patron.
+Added: Puck Softpaw as Patreon patron.
+Changed: Select list entries on right-click so the right-click menu has a target.
+Changed: Sandisha to Sandy Burgess as requested.
+Changed: Make pose creation animation eternal so it does not get deactivated.
+Changed: Allow animation/pose import to import entire animations with all keyframes.
+Changed: By default do not add any keyframes to any bones, let the user choose which bones to include.
+Changed: Moved animation creation into its own window.
+Changed: Version to 4.3.1 - Kneading Dragon.
+Fixed: Attached lights not properly reflecting on the water surface. Undo the attachment light fix, attached lights no longer seem to cause large light reflections on water.
+Fixed: Tiny mouse movements no longer being correctly recognized when panning/zooming/rotating the camera.
+Fixed: Sorting of bones in Poser shouldn't be possible.
+Fixed: Right click menu on Pose loading list.
+Removed: Pose animator features from Poser.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.3.0
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="416"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Copy SLURL feature to new profile actions menu.
+Added: "Hide Selected Objects" option to Build options window.
+Added: Allow scrolllists to have a right-click context menu.
+Added: New feature to mirror a selected bones rotation.
+Added: New feature to symmetrize a bone (copy and mirror from the other side).
+Added: New feature to copy and paste rotations, positions and scales from one bone to another.
+Added: New feature to switch to a "Create-A-Pose" mode allowing to create and export poses.
+Added: New feature to allow exporting created poses to be exported as .ANIM files to be uploaded to Second Life.
+Added: New right-click menu to the bone list to access all kinds of options such as loading transformations, toggling bones and mirroring/symmetrizing bones.
+Added: New feature to allow importing .ANIM files into the Poser to be edited.
+Added: Notifications to the Poser to notify the user of sucessful pose exports and where they go.
+Added: Controls to set animation export parameters such as ease in/out, hand pose and priority for uploads outside of Black Dragon.
+Added: Dijk as Patreon patron.
+Added: Jule as Patreon patron.
+Changed: Right-click debug spammery to debug level logging.
+Changed: Attempt to read AMD memory for preferences display.
+Changed: Overhauled "First Life" and "Notes" tabs in the new profile window.
+Changed: Permission icons in "Second Life" profile window tab to match the "People" window permissions.
+Changed: Poser Version to 14.
+Changed: Allow animation export function to overwrite already existing files.
+Changed: Animation export to write animation files into AppData\Roaming\BlackDragon\user_settings\animations.
+Changed: XML export formatting to be properly and correctly formatted as expected, includes backwards compatibility.
+Changed: Make .ANIM upload use the .BVH upload window to allow for proper preview and customization before upload.
+Changed: Version to 4.3.0 - Exporting Dragon.
+Fixed: Sidebar shadow distance sliders not refreshing if changed outside the sidebar.
+Fixed: Nearby chat not showing the nearby chat icon when starting undocked.
+Fixed: (Again) Environment settings picker window not showing any settings in the filtered inventory view.
+Fixed: Right click seleciton performance with high-poly meshes being unbearable.
+Fixed: Not being able to look up/down while sitting on objects.
+Fixed: Poser import button not working.
+Misc: Some code cleanup and commenting.
+Misc: Some more cleanup.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.2.1
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="169"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Chantelle M as Patreon patron.
+Added: NH as Patreon patron.
+Added: Vaimee as Patreon patron.
+Added: 聚力阿 Джулия 寿梨亜于日丫處釐雅ジュリア Julia as Patreon patron.
+Changed: Restored (mostly) old style Second Life profile layout. (Only second life tab for now).
+Changed: Version to 4.2.1.
+Fixed: Media controls in Build - Texture no longer working.
+Fixed: Alpha Mask Cutoff in Build - Texture no longer showing.
+Fixed: Right-click menus no longer working in Mouselook. As per request.
+Fixed: Minimap window cannot be dragged anymore.
+Fixed: All gestures falsely defaulting to "B" shortcut.
+Fixed: Several new notifications for profiles missing and tossing an error when displayed.
+Fixed: Trying to click "Copy SLURL" in World map can result in clicking invisible spinner arrows when clicking too far right.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.2.0
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="117"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Adrian as Patreon patron.
+Added: Game Girl Power as Patreon patron.
+Added: Rybakov as Patreon patron.
+Added: Ulysses Von Hex as Patreon patron.
+Changed: Version to 4.2.0.
+Fixed: Compile errors.
+Fixed: Crashing on right click due to octree generation.
+Fixed: Compile #2.
+Merge Linden Release.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.1.5
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="195"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Script option menu button to Tools - Content tab for quick access of script related options.
+Added: Shadow Drake as Patreon patron.
+Added: Zeltfresse as Patreon patron.
+Changed: Turn off Avatar movement with controllers by default to prevent the last few rare instances of people permanently turning.
+Changed: Turn off "Since Logoff" inventory filter in Recent tab, making it actually useful again.
+Changed: Make Preferences memory usage display only the memory used by the Viewer.
+Changed: Clarify "Enable Fullbright" tooltip to prevent confusion.
+Changed: Object Object Occlusion tooltip and added a warning that it will cause flickering in water reflections.
+Changed: Rubb Rubbers special thanks name as requested.
+Changed: Updated Olakota's patron amount to the latest highest amount.
+Changed: Re-enabled Look At and Point At options for everyone.
+Changed: Version to 4.1.5.
+Fixed: Max Texture Memory warning appearing when setting max to "Unlimited".
+Fixed: Enter toggling borderless window instead of Alt + Enter.
+Removed: Broken "Close" button in Inventory filter window.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.1.4
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="130"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Shortcut (Alt + Enter) to toggle borderless window mode.
+Added: VSync option to Preferences - Display.
+Changed: Clarify that Input and Output devices are targeting Voice only.
+Changed: As per request changed Outfit menu entry to toggle the Outfit floater rather than just opening it.
+Changed: Tooltips for Max FPS to show the correct debug setting values.
+Changed: Shadow Bias and Shadow Bias Error defaults slightly to fix some shadow crawling glitches (for now).
+Changed: Nastasya Sokolova's patreon amount and added the store link as requested.
+Changed: Version to 4.1.4.
+Fixed: Crash when using RLVa.
+Fixed: A special thanks store link.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.1.3
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="195"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Ability to recapture the current bone rotations and positions for all disabled bones.
+Added: Options to change pitch and yaw rotation speed.
+Added: Missing inventory right-click options. (Code is missing, they are not active yet)
+Changed: Renamed "Rotation Speed" to "Avatar Rotation Speed" to make it clearer what it does.
+Changed: All environment settings preset dropdowns to the new ticker dropdowns to give people their next/previous preset buttons.
+Changed: Slightly improve right-click code and add some basic logging to it.
+Changed: Version to 4.1.3.
+Fixed: Revert and Reset bones not resetting the Y and Z column values.
+Fixed: IM background image breaking more and more which each time its undocked and redocked.
+Fixed: Keybinding not clearing mouse input when a key is bound and vice versa.
+Fixed: Mouse click going through the action dropdown and falsely being accepted as desired mouse bind.
+Fixed: Joystick axis being inverted.
+Fixed: Abyssmal performance when selecting polygon heavy rigged meshes.
+Misc: Some cleanup and code merge.
+Misc: Bring back old selection outlines. (Not used yet)
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.1.2
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="520"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Ability to bind Left and Right Mouse click to keybindings system.
+Added: Icons to all mappings to make it easier for people to see what button/axis they are binding.
+Added: WIP special thanks floater.
+Added: Artifex Voxel as Patreon patron.
+Added: Alex B. Collie as Patreon patron.
+Added: Anna Mendoza as Patreon patron.
+Added: Annabelle Puddles as Patreon patron.
+Added: Ashton Agnes as Patreon patron.
+Added: Barbarella Peapod as Patreon patron.
+Added: Becky Lu as Patreon patron.
+Added: Burleh Leonard as Patreon patron.
+Added: Dave Booth as Patreon patron.
+Added: Jamie as Patreon patron.
+Added: Jenya as Patreon patron.
+Added: Kevin Fellion as Patreon patron.
+Added: Kihae as Patreon patron.
+Added: Loverdag as Patreon patron.
+Added: MeanBunneh as Patreon patron.
+Added: Moist Fruitcake as Patreon patron.
+Added: NadnerbD as Patreon patron.
+Added: Nora Foraois as Patreon patron.
+Added: Olakota as Patreon patron.
+Added: Red Blaze as Patreon patron.
+Added: Shanese as Patreon patron.
+Added: Sandisha as Patreon patron.
+Added: Squidpaladin as Patreon patron.
+Added: VideoGameNoodle as Patreon patron.
+Added: Zaphne Diggs as Patreon patron.
+Added: Bad Decisions shop link to Virginia J Hughes as requested.
+Changed: Altered "Include Alphas into Depth" behavior and fixed it causing alphas to change in transparency.
+Changed: Overhauled 'Set Key' and 'Change Key' dialogs and made them easier to understand.
+Changed: Completely rework joystick deadzones and make them work as expected, this should fix people rotating on their first use.
+Changed: Defaults for joystick scales and deadzones for the new rework.
+Changed: Overhauled layout for the flycam configuration.
+Changed: Version to 4.1.2.
+Fixed: Script trigger not bindable.
+Fixed: Script trigger missing from default keybinds (needs reset to take effect).
+Fixed: Profile save notification is broken.
+Fixed: Framerate Limiter not working on restart, requiring the limit to be set again.
+Misc: Merges.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.1.1
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="221"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: "Big" UI Size option.
+Added: Eugene The Hero as Patreon patron.
+Changed: Fullbright toggle tooltip and added warnings to it.
+Changed: Improved Max Texture Memory tooltips and added a warning about its increased memory usage.
+Changed: Made Texture Memory warning trigger on "Unlimited" to warn the user of the increased memory usage.
+Changed: Use LL's selection outline code and change its look to fit the original intend of the BD style.
+Changed: Version to 4.1.1.
+Fixed: Poser resetting when exiting mouselook.
+Fixed: Left Mouse Button not triggering scripts in Mouselook.
+Fixed: Head is scaled down while in Poser mode when entering and leaving Mouselook.
+Fixed: Camera Mode buttons not working.
+Fixed: Double clicking the big preview button twice in the snapshot window will break and crash the Viewer.
+Fixed: Fullbrights not being affected by fog.
+Fixed: Quick Draw Distance slider not triggering the Draw Distance warning.
+Fixed: Several incorrect values and tooltips for UI Size.
+Fixed: Double Click in Mouselook results in a teleport.
+Fixed: Shadow resolution reverting when taking snapshots or toggling Depth of Field.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.1.0
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="468"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Option to change the maximum allowed GPU memory.
+Added: Missing performance rating icons.
+Added: Dzintars Irbe as Patreon patron.
+Added: Galaxy Littlepaws as Patreon patron.
+Added: Pnpnkitin's store.
+Added: Unknown Name as Patreon patron.
+Changed: Made Automatic Memory Management the new default, removed the options and tweaked it slightly.
+Changed: Reenabled debug output and a bunch of debugs.
+Changed: Object Cache Occlusion to false by default in an attempt to fix occlusion culling problems.
+Changed: Version to 4.1.0 - Speeding Viewer.
+Fixed: Compile.
+Fixed: Compile.
+Fixed: Edit My Outfit "Save As" button missing and broken.
+Fixed: Broken floater_about.xml file.
+Fixed: Compile.
+Fixes: Several differences between official and BD code.
+Fixed: Shadows being broken.
+Fixed: Several more missing LL to BD code inconsistencies.
+Fixed: Materials being broken.
+Fixed: Sound not working.
+Fixed: Imageworker iterating through the list twice.
+Fixed: Framerate limiter not working anymore.
+Fixed: Wrong option labels for framerate limiter.
+Fixed: Snapshot dimensions label being offset.
+Fixed: Save As button in Edit Outfit being cut off.
+Fixed: Crash when opening "Picks" panel in some people's profiles.
+Fixed: Token in patreon link.
+Removed: Defunct Flycam option from Machinima Sidebar.
+Removed: Unneeded Help - About Black Dragon setting entries in the sys spec string.
+Removed: Several impossible options for the framerate limiter.
+Removed: Obsolete Double Click Teleport/Autopilot options.
+Removed: Unclickable "Take 360 Snaphot" its taken through the menu.
+Misc: Cleanup of some code.
+Misc: More viewer code merge.
+Merge Linden Release.
+Merge Linden Release.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.0.6
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="429"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Pnpnkitin as Patreon patron.
+Added: Arien Lightspear as Patreon patron.
+Added: Roxanna Tesch as Patreon patron.
+Added: Kouturiér as Patreon patron.
+Added: Pink Absinthe as Patreon patron.
+Added: Bloodwain Arun as Patreon patron.
+Added: Soda Sullivan as Patreon patron.
+Added: ᴆɛᴌ as Patreon patron.
+Added: Anomaloris as Patreon patron.
+Added: Dana Pierce as Patreon patron.
+Added: Ark as Patreon patron.
+Added: Matt as Patreon patron.
+Changed: Near clipping plane adjustments to reduce distance flicker of objects.
+Changed: (EXPERIMENTAL) Force mesh to be downloaded completely with all LOD's right away rather than only the LOD currently required.
+Changed: Some basic background cleanup for places. Still needs a full rework.
+Changed: Kenzie Starlight's patron amount to 5$.
+Changed: Rains name to Skylene Rains and changed the patron amount to 10$.
+Changed: Version to 4.0.6.
+Fixed: Marketplace links in Patreon list.
+Fixed: Flycam setup being cut off at the bottom.
+Fixed: Saved poses shifting some bones slightly due to their scale not being saved.
+Fixed: Compile.
+Fixed: More compile errors.
+Fixed: Compile.
+Fixed: Environment Settings picker being unreadable.
+Fixed: Sit down (anywhere) not working.
+Fixed: Crashing on left-click while sitting, reverted viewerinput code to last working version.
+Fixed: Group role dropdown icon overlapping with the text.
+Fixed: Save/Save As dropdown in Outfits not working, replace it with Save and Save As buttons.
+Fixed: Modify Environment role action missing from group roles.
+Fixed: Recent View in Inventory not showing item links.
+Fixed: World Map being able to be zoomed infinitely.
+Merged Linden Release.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.0.5
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="234"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Button to revert selected bones to their original position prior to us modifying them.
+Added: Ability to keybind Walk-To and Teleport-To via the keybinding system.
+Added: Shortcut (Ctrl + O) to open Appearance/Outfits. As per suggestion.
+Added: Double Click TP as default keybind.
+Added: Ability to bind Left Mouse Double-Click to actions.
+Changed: Allow overdriving slider values by typing in values directly.
+Changed: Flash the poses button whenever we save a pose to give a visual cue where they can be found.
+Changed: Switch out of Rotation/Position/Scale tabs when they become unavailable for bones.
+Changed: Lock "Show Look At" and "Show Point At" behind godmode/developer checks.
+Changed: Sync maximum Blur Size value with Machinima Sidebar equivalent.
+Changed: Experimental SSAO tweak for smoother SSAO.
+Changed: Make experimental mouselook scaling option disable the reset skeleton call on leave too.
+Changed: Default SSAO setting tweaks.
+Changed: Version to 4.0.5.
+Fixed: Head attachments shifting permanently (until relog) when entering and leaving mouselook.
+Removed: Bad and unused string in Help - About Black Dragon.
+Removed: Broken button keybinding system for voice toggle in Preferences - Sound.
+Misc: Commenting.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.0.4
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="143"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Option to disable experimental head scaling in Mouselook.
+Added: Option to disable Avatar Performance Rank indicator in nametags.
+Changed: Preload some icons to try and fix loading screen tips getting cut off.
+Changed: Version to 4.0.4.
+Fixed: Poser breaking due to elevated animation priority.
+Fixed: Conversations window not retracting into the correct direction when IM tabs are switched to the left side.
+Fixed: IM tabs of friends have purple names.
+Fixed: Poser randomly breaking when appearance update messages arrive.
+Fixed: Autoscale Rendering being enabled each new login session.
+Removed: Fast Cache Fetch option and force disabled it in code to prevent further incidents with this option.
+Misc: Possible future code changes, currently inactive due to something missing.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.0.3
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="585"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Function to revert poser bone rotations to original pose.
+Added: Flyam status bar button.
+Added: Missing textures.
+Added: Ample Clarity as Patreon patron.
+Added: Cisco Jabberwocky as Patreon patron.
+Added: Derenova as Patreon patron.
+Added: Erik Hugo as Patreon patron.
+Added: iPro Resident as Patreon patron.
+Added: Jasmyne as Patreon patron.
+Added: Kenzie Starlight as Patreon patron.
+Added: Shyaltii Milneaux as Patreon patron.
+Added: Sonny J as Patreon patron.
+Added: Stephan Bedard as Patreon patron.
+Added: Tatsushi Ohara as Patreon patron.
+Added: Zieb Zen as Patreon patron.
+Added: Prim Possible store page to login screen.
+Added: ASA Studios store page to login screen.
+Added: Implemented a simple performance ranking system shown on the avatar name tag.
+Added: Zelda as Patreon patron.
+Added: Mister Durden as Patreon patron.
+Changed: Raised default Xbox 360 Controller deadzones slightly to reduce accidential movement.
+Changed: Make People window save its visibility.
+Changed: Switched out login screen video.
+Changed: (EXPERIMENTAL) Scale down head bones while in mouselook to prevent them clipping into view.
+Changed: Swapped Wireframe and Linden style outlines.
+Changed: Increase Poser priority to 10 making it theoretically impossible to overwrite.
+Changed: Glow settings in Machinima sidebar now become disabled rather than invisible.
+Changed: Version to 4.0.3.
+Fixed: Compile.
+Fixed: Rigged attachments attached to the head not hidden in mouselook.
+Fixed: Crash when trying to switch camera presets.
+Fixed: JPEG Snapshot Quality slider is hidden behind buttons.
+Fixed: Reworked and fixed keybinding system for the latest code, implemented experimental mouse bindings.
+Fixed: Developer icon not being centered properly.
+Fixed: Viewer internally binding Left Mouse Button to all keybinds without a mouse entry.
+Fixed: Zoom and Jump button binding for flycam freaking out.
+Fixed: Developer tag clipping into nametag too much when the nametag has more than one line.
+Fixed: Snapshot window not setting custom height when Remember Snapshot Mode and Keep Aspect are off.
+Fixed: Potential initialization crash.
+Removed: Unnecessary code.
+Misc: Shader merge, commenting and fixes.
+Misc: Simplified complexity calculation slightly.
+Misc: Cleaned up nametag code a bit.
+Merge Linden Release.
+Merge Linden Release.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.0.2
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="169"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Voice indicator to nametag when Voice is on but we're not speaking.
+Added: Option to local snapshots to enable camera aspect ratio scaling just like in inventory shots.
+Changed: Require only trans and copy permissions to save textures into presets.
+Changed: Change the Fixed Environment editor title to inform the user that they cannot save a preset unless they swap to a preset with permissions.
+Changed: Match the pay object and avatar floaters to the new LL layout, including the description bar.
+Changed: Make Return deselects chatbar option also deselect IM chat. (Requested)
+Changed: Version to 4.0.2.
+Fixed: Poser cannot delete presets containing certain special characters.
+Fixed: Fixed Environment editor does not save presets properly and deletes custom textures even when we have the permissions for them.
+Fixed: Local snapshot being squished when snapshots are taken at lower-than-window resolution.
+Fixed: Terrain Quality option getting stuck at low/medium.
+Removed: Object Cache option and disabled it in code as it was solely there to cause issues.
+Removed: Save snapshot to Profile (as it is currently broken in LL Viewer too).
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.0.1
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="273"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: "Requires Deferred Rendering" label next to all major toggles to clarify even more that they do infact require it.
+Fixed: Deferred can disable itself leaving the user unable to re-enable it.
+Fixed: Antialiasing warning background appearing ontop of the Deferred tab background.
+Fixed: Avatar Physics Quality not being disabled when Avatar Physics is toggled off.
+Fixed: Labels for dropdowns not showing greyed out when the dropdown is disabled.
+Fixed: Incorrect tooltip in shadow resolution settings. 6K is 128MB not 112MB.
+Fixed: Incorrect warning stating that Intel GPU only impacts performance when it does in fact make you unable to use Deferred.
+Fixed: Several notifications not blocking input until the user confirmed the notification.
+Fixed: Warning notifications not appearing on top of the snapshot window (specifically the 4K warning).
+Fixed: Local snapshot format cannot be changed inside the Snapshot window.
+Fixed: Binding Default Zoom/Roll to nothing (-1) prevents using Zoom and Roll completely.
+Fixed: Bound button actions being applied possibly several times resulting in too much input per frame.
+Fixed: Post Processing Effects (Sepia, Greyscale, Posterize etc) not working when Volumetric Lighting was enabled but Shadows disabled.
+Fixed: Long standing issue with light softening "snapping" to different strengths at different camera up angles.
+Fixed: Long standing issue with light softening only incrementing in "steps" when raising Blur Size option.
+Changed: Moved Enable Fullbright option to basic options.
+Changed: Minimum value for Glow Iterations to 1 to prevent people from setting it to 0 and getting glow stuck on screen.
+Changed: Updated and fixed the shadow resolution warning notifications to include 8K and the correct 6K memory amount.
+Changed: Tweaked blur light kernel slightly for slightly sharper shadows and less banding at higher blur size.
+Changed: Version to 4.0.1.
+Misc: Cleaned up llviewerjoystick.cpp/h a bit.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     4.0
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="624"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Missing marketplace link to Thalia's patreon entry both on login and About Black Dragon.
+Added: VirtualVerse.One Forum as patreon supporter to the login page.
+Added: Developer indicator (donut) to nametags.
+Added: An explicit warning that disabling Object Cache will have undesired effects.
+Added: Flycam reset camera roll binds.
+Added: Copy to clipboard button to Camera Recorder window.
+Added: Option to lock camera position in place while in Freecam.
+Added: Blake Selkie as Patreon patron.
+Added: Daisha as Patreon patron.
+Added: EGO SUM as Patreon patron.
+Added: Imokon Neox as Patreon patron.
+Added: Rains as Patreon patron.
+Added: VirtualVerse as Patreon patron.
+Added: Imokon Neox's store to the login page and about section.
+Added: bdheadrotmotion.cpp/h. Currently not used.
+Changed: Allow attaching or detaching via double click in all 'Appearance' window tabs (My Outfits, Edit Outfit etc)
+Changed: Overhauled 'Animations Controls' window, relabeled everything and added tooltips.
+Changed: Disabled legacy voice dot and replaced it with a nametag based voice dot for better visibility and performance.
+Changed: Overhauled Preferences - Display tab completely, new layout, grouping and more usage of the new widget, simplified most of the options.
+Changed: Overhauled personal script memory display.
+Changed: Overhauled region script memory display.
+Changed: Reduced saving snapshot resolution to persist only per session to prevent a potential crash loop.
+Changed: Raised Remember Snapshot Mode to persist per session.
+Changed: Overhauled Script Editor window layout and look slightly.
+Changed: Improved several Preferences - Display tooltips with more information.
+Changed: As per request changed Luxxo's name to Lux Chiantelle in the Patreon section.
+Changed: Version to 4.0 - Refreshing Dragon.
+Fixed: Animesh being counted as many times as it has sub pieces in the Advanced Complexity breakdown.
+Fixed: Poser reverting body paramaters to previous avatar if the Poser was not closed while changing avatars.
+Fixed: Snapshot window not remembering last snapshot resolution when closing out.
+Fixed: Double click on some clothing layers 'replacing' the previous layer instead of adding like it is expected.
+Fixed: Local Textures tab being wrongly disabled in cases it shouldn't.
+Fixed: Inventory menu missing entry to create new 'Universal' layer.
+Fixed: Script Memory info window is nowhere to be found, readded it to the main Dragon menu.
+Fixed: Snapshot window custom controls not saving their snapshot resolution.
+Fixed: Inventory filters for 'Settings' do not work.
+Fixed: Switch IM Tab side missing a warning that it needs a Viewer restart.
+Fixed: Missing entries for several textures in Textures.xml and several textures in repository.
+Fixed: Tooltips of dropdown entries not showing.
+Fixed: Autoscale Rendering being broken.
+Fixed: Several Preferences - Display tooltips.
+Fixed: A couple Preferences - Display layout inconsistencies.
+Fixed: Camera presets containing "-" cannot be deleted.
+Fixed: Environment preset reverting when opening another preset while the Fixed Environment window is already opened.
+Removed: Snapshot send via mail panel.
+Misc: Cleaned up now unused code for sending snapshots via E-mail.
+Misc: Moved developer string into the Black Dragon strings section.
+Misc: Reduced snapshot autoscale multiplier to per session just in case.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.11
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="312"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Ability for icons to be repeated several times.
+Added: Ability for dropdown comboboxes to use the new icon repeat functionality to create a new widget type allowing to select next/previous entries.
+Added: Ability for list entries in comboboxes to each have their own separate tooltip.
+Added: Danielle Abney as Patreon patron.
+Added: GBTH project as Patreon patron.
+Added: Haefnir as Patreon patron.
+Added: Liz as Patreon patron.
+Added: Luxxo as Patreon patron.
+Added: Mikey as Patreon patron.
+Added: Seefor.ark2 as Patreon patron.
+Added: Violet Voxel as Patreon patron.
+Added: XavaX as Patreon patron.
+Changed: Ripped out and moved the permission checks as well as the culling of texture ID's into its own function for easier calling and replace both inventory and local saving to use the new function.
+Changed: Remove ability to save presets if we don't use a locally saved preset or an item we have permissions of to do so. As per Vir.
+Changed: Replaced most of radio buttons with the new combobox tickers to simplify the usage, save space and make everything look nicer. Work in Progress.
+Changed: Overhauled a couple warnings in preferences and their conditions when and how to display. Work in Progress.
+Changed: Make the Animation Controls window "Stop" stop only the selected animation rather than absolutely everything.
+Changed: Rachel Quinn patron amount to the new highest.
+Changed: Version to 3.9.11.
+Fixed: Permissions of textures not being respected when using "Save As (Item)".
+Fixed: Projector light shadow resolution not working properly separately on both projectors (or at all).
+Fixed: Pressing "Search" again will reset the active search window (if any).
+Fixed: All tooltips and moved them over from the radio buttons into the new ticker widgets.
+Misc: Very very first rough "Animator" draft. Work in Progress. Currently can't do much other than showing keyframes on bones.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.10
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="26"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Fixed: Snapshot scaling is broken and taking snapshots in high resolution results in them being poorly upscaled.
+Fixed: Quick Draw Distance slider being all the way to the left instead of below the icon.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.9
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="416"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Implement Pose flipping (mirroring/inverting an entire pose).
+Added: Camera Roll status button to reset camera roll when not default.
+Added: Option to crop inventory snapshots like they did before they were broken.
+Added: Option to toggle taskbar icon flashing when receiving IMs.
+Added: Debug setting to disable generating impostors. (RenderImpostors)
+Added: Option to upload snapshots taken locally directly to inventory.
+Added: The Little Branch patreon store link.
+Added: Option to toggle FPS counter.
+Added: Aebleskiver Thibedeau as Patreon patron.
+Added. Dann Haefnir as Patreon patron.
+Added: Emeline Laks as Patreon patron.
+Added: Heleeennn as Patreon patron.
+Added: Lucas Alastair Moonfeather as Patreon patron.
+Changed: Attempt to open inventory when clicking "Show in main panel" and the inventory is not opened.
+Changed: Make Inventory item properties use SLURL's for names for easier accessibility of creators and owners.
+Changed: Allow favorising windlight/EEP presets in the favorites bar.
+Changed: Improved responsiveness of Viewer while world precaching to prevent the Viewer from freezing too long resulting in a timeout shortly after logging in.
+Changed: Disabled using Local Textures in BOM layers to prevent potentially crashing the Viewer due to unknown reasons.
+Changed: Allow uploading 1024x1024 inventory snapshots.
+Changed: Unify, simplify and rework the snapshot window a single code file, remove all unnecessary and duplicate code.
+Changed: Version to 3.9.9.
+Fixed: More compile errors.
+Fixed: Camera Locked status button not toggling camera lock off correctly.
+Fixed: Cameraa Free DoF status button not toggling free cam lock off correctly.
+Fixed: Onscreen camera controls not subject to zoom-scaling like Alt-Cam making it hard to control when zoomed in.
+Fixed: Wearables not replacing when double clicked from inventory.
+Fixed: Animesh avatars showing empty complexity information when being attached to another avatar.
+Fixed: Snapshot window not resizing with snapshot aspect ratio.
+Removed: Obsolete files.
+Misc: Commenting.
+Misc: Internal name cleaning.
+Misc: Moved all Outfit snapshot floater code into the main snapshot floater code and removed all unnecessary and duplicate code.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.8
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="338"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Show Selection Beam option to Build options.
+Added: Show Light Radius option to Build options.
+Added: Select by surrounding option to Build options.
+Added: Next and Previous Element buttons to Build Tools.
+Added: Selection Outlines option to Build Tools.
+Added: Show Selection Outlines option to Preferences - Viewer tab.
+Added: CallieRose2013 as Patreon patron.
+Changed: Renamed Grid Options window to Build options.
+Changed: Moved Select Only My Objects to Build options.
+Changed: Moved Select Only Physical Objects to Build options.
+Changed: Moved Snap to Grid mode selection to Build options.
+Changed: Swapped Snap to Grid for a checkbox and moved it to the other commonly used options.
+Changed: Make Selection Outlines Type and Refresh Selection Outlines option depend on Show Selection Outlines.
+Changed: Disabled shortcut for "Quit Viewer", it was way too close to rolling the camera.
+Changed: Version to 3.9.8.
+Fixed: Environment Editors getting out of sync when a preset is changed outside of the Fixed Environment window while its open.
+Fixed: Deferred Rendering failing when SSR is enabled but everything else is disabled.
+Fixed: Viewer attempting to open an empty invalid chat when double clicking "None" group.
+Fixed: Snapshots sometimes tiling weirdly and inventory snapshots being broken.
+Fixed: Potential startup crash when gJoystick isn't initialized yet.
+Fixed: Crash when trying to edit linden grass/trees.
+Fixed: First-time startup crash when a controller was plugged in.
+Fixed: Simple fullbrights with shiny not being subject to atmospheric haze.
+Fixed: Image dimensions text in texture picker not being displayed.
+Fixed: Fixed Rigged Alpha not being fogged underwater, ported from Alchemy as per Drake's recommendation.
+Removed: Class 3 shaders.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.7
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="91"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Reimplement Hover Glow Objects now that its working again.
+Added: Patreon shop for FOXCITY.
+Changed: Count specular maps and normal maps into complexity.
+Changed: Version to 3.9.7.
+Fixed: Several warnings of missing or wrong widgets found in several parts of the UI.
+Fixed: Another wrong widget name warning.
+Merged Linden Release.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.6
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="273"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Aimee Stubbs as Patreon patron.
+Added: Avalia as Patreon patron.
+Added: Option to toggle specularity on water surface, allowing it to reflect water but exhibit the glow-though-fullbright issue.
+Changed: Do not add a preset separator to camera presets if there are no custom presets.
+Changed: Make the Viewer report the original LL complexity calculation values to the server to prevent surprisingly getting banned by scripted ban tools based on complexity.
+Changed: Version to 3.9.6.
+Fixed: Sliders getting blocked/reverted while we are dragging them or typing into the text field.
+Fixed: Edit button in Places not working, not hiding and being shown in the wrong panel.
+Fixed: Mouselook preset falsely appearing in the camera presets dropdown.
+Fixed: Teleport button in profile doesn't enable when it should.
+Fixed: Posing status button not stopping posing.
+Fixed: Turn does not swap to Strafe when in Third Person Steering Mode or Right-Click drag mode.
+Fixed: Depth Snapshots weirdly zooming in when taking snapshots at unusual screen ratios.
+Fixed: Clouds being unusually dim and lacking definition. Fix by Drake (forported from Official)
+Fixed: Several wrong names of widgets in Places, resulting in several widgets not working or showing dummy text.
+Fixed: Deferred Rendering not working when not at least SSAO or Shadows are on.
+Fixed: Media-on-a-prim controls being broken and the volume control not appearing.
+Fixed: Sparkling sun light reflection on water glowing through fullbright objects.
+Misc: More Developer checks.
+Misc: On behalf of Drake's recommendation, ported a bunch of his EEP fixes early.
+Removed: Broken default LL camera presets.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.5
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="104"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Option to disable status buttons.
+Changed: Version to 3.9.5.
+Fixed: Crouching status button not working.
+Fixed: DoF status buttons not hiding after clicking them.
+Fixed: Sitting status button not showing in all different conditions of sitting.
+Fixed: Move floater not showing stand and flying buttons.
+Fixed: Right-click menu showing in Appearance mode.
+Fixed: Right-click menu showing while holding ALT (zooming around)
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.4
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="403"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Belen Sotelo as Patreon patron.
+Added: Dash Riprock as Patreon patron.
+Added: KT Syakumi as Patreon patron.
+Added: Ral as Patreon patron.
+Added: Valentine Wolfram as Patreon patron.
+Added: Ability to toggle crouch and map controls to toggling crouch via the Keybinding system.
+Added: Flippy Dainox as Patreon patron.
+Added: Foxcity as Patreon patron.
+Changed: Improved responsiveness of small scale mouse movements for camera movement.
+Changed: Replaced stand-stop-flying status buttons with a full BD status container showing several statuses in addition to just sitting and flying.
+Changed: Version to 3.9.4.
+Fixed: Inconsistent behavior of CTRL/Shift when using as modifier for mass/precision controls on spinners.
+Fixed: Potential crashfix for startup crash due to invalid environment asset.
+Fixed: Logs getting spammed with warnings when taking snapshots.
+Fixed: UI vanishing when refreshing the snapshot after taking one with Remember Snapshot mode enabled.
+Fixed: Camera only being able to jump large distances when zoomed in and moving the mouse ever so slightly. Make the camera scale its movement with zoom level.
+Fixed: Sliders in Environment Editor becoming increasingly harder to slide all the way to either end especially at lower framerates.
+Fixed: Altitude based windlights not being triggered.
+Fixed: Projector light settings in Edit - Features being available when the light is no projector.
+Fixed: Even more compile warnings of unused declarations.
+Fixed: Shaders being dirtied causing slow code execution when it shouldn't. Thanks to Drake.
+Fixed: Volumetric Lighting being broken due it requiring the shaders being dirtied but Volumetric Lighting not being classified as needing atmospherics thus not triggering a dirty.
+Fixed: Login screen video subtitles appearing when using the german UI, causing the subtitles to interfere with the bottom login panel and making it hard to read.
+Fixed: Scrollpanel inconsistencies in a couple preferences tabs.
+Fixed: Compile.
+Fixed: Outdated deferredUtil.glsl shader.
+Fixed: Shininess being broken since EEP. Fix by Drake.
+Fixed: Impostors not being properly lit.
+Removed: All language files from non-english/german languages that were added over time with code merges.
+Misc: Added bdstatus.cpp/h to CMakeLists.txt and fixed linking errors.
+Merged Linden Release.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.3
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="273"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Catalina Staheli as Patreon patron.
+Added: Raia Aurelia as Patreon patron.
+Added: Caitlin as Patreon patron.
+Added: Option to mirror all rotations done to one bone to the opposite side one to the Poser window.
+Added: Option to disable leaving other rotation sliders alone and faking rotation values resulting in wrong default positions to the Poser window.
+Added: Button to refresh the avatar list to the Poser window.
+Changed: Let scrolling not fall through to the camera when we reach the end of a scrolllist.
+Changed: Skip transition of progress screen on logout to hide rendering shutdown (pink world) like in other Viewers.
+Changed: Version to 3.9.3.
+Fixed: Viewer does not open place profiles anymore when an SLURL command is sent to it from the browser.
+Fixed: Toggling Depth of Field while Volumetric Lighting is on can double the glow strength.
+Fixed: Vignette options in Preferences - Display are cut off.
+Fixed: Several compiler warnings about unused code.
+Fixed: People and Inventory menus vanishing under certain conditions when resizing the window.
+Fixed: Object Object Occlusion freaking out and making objects above the surface blink constantly when the camera is below water.
+Fixed: Object Object Occlusion freaking out and making objects pushed below the water surface when the camera is above water blink.
+Fixed: Poser Avatar list never refreshing as intended and being halfway broken most of the time.
+Fixed: Voice call window docking tongue pointing into the wrong direction and being at the top instead of the bottom when the voice button is in the top toolbar.
+Misc: Improved out-commented code and re-enabled debugging code that is actually meant to debug.
+Misc: Comment out unused reveal intro panel code, we don't have one.
+Misc: Fixed more compile warnings.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.2
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="312"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Cliff Hofmann as Patreon patron.
+Added: Kodaijin as Patreon patron.
+Added: Num Bing as Patreon patron.
+Added: Trenton Maedor as Patreon patron.
+Added: Allow Depth of Field in Edit mode option to preferences.
+Added: Option to toggle considering roughness in SSR calculations.
+Added: Belec as Patreon Patron.
+Changed: Vastly improved and extended the complexity performance report.
+Changed: Disabled all debug logs.
+Changed: Final performance report verdict to give a rough summary again.
+Changed: Version to 3.9.2.
+Fixed: (POTENTIAL) Move Plugin Read Thread killing further to the front of the shutdown process in an attempt to reduce or fix the times the Viewer stays alive when quitting from login.
+Fixed: Undo fix that fixed the FPS limiter working for anything but Intel GPU's.
+Fixed: Huge VRAM usage difference when touching shadow resolution controls after starting the Viewer. Saves up to 600MB+ depending on shadow resolution.
+Fixed: Depth of Field not working underwater anymore.
+Fixed: Viewer Location buttons being falsely greyed out when they shouldn't and others not being greyed out when they should.
+Fixed: Places - Landmarks scrolling around wildly the first few clicks into the window.
+Fixed: Crash when touching day cycle editor controls after opening it when there hasn't been any active day cycle yet in this session.
+Fixed: Email offline IM's disables itself every time you open and close the preferences window from the login screen.
+Fixed: Turn off OpenAL usage, we have FmodStudio, also i think this breaks streams.
+Fixed: Case where fasttimers view would stay empty because the colors weren't generated the first time opening.
+Misc: Put an end to annoying one-liners.
+Misc: Move FPS Limiter option to Black Dragon settings now that its officially gone.
+Misc: As per Drake's suggestion, turn off this evil debugLoggingEnabled call.
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.1
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="247"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Per suggestion an option to turn off "Return" triggering the default inventory action when an item is selected.
+Added: Simple performance report tab to Advanced Complexity Window.
+Added: Face count to complexity calculation.
+Added: Alexa Starlight as Patreon Patron.
+Added: Kaymayhem as Patreon Patron.
+Added: Seren Villiers as Patreon Patron.
+Changed: Make notification for unticking "Remember Account" more clear and change the pointers to the correct preferences tab.
+Changed: Move requesting balance to after the Inventory is opened and initialized.
+Changed: Version to 3.9.1.
+Fixed: Profile can't be closed via CTRL + W.
+Fixed: Animations cannot be played backwards anymore.
+Fixed: Derender list being cleared when double-click teleporting or teleporting inside the same region.
+Fixed: Notification "move" buttons not working anymore.
+Fixed: Crash when failing to cache an image.
+Fixed: Compile.
+Fixed: Crash when selecting HUD objects.
+Fixed: Preferences title inconsistencies.
+Misc: Cleaned up llpreviewanim.cpp a bit.
+Merge Linden Release. (357 Changes)
+     </text>
+     <view_border
+     bevel_style="in"
+     follows="top|left"
+     height="1"
+     layout="topleft"
+     left="1"
+     name="cost_text_border"
+     top_pad="10"
+     width="250"/>
+     <text
+     follows="top|left|right"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="14"
+     top_delta="-6"
+     left_pad="3"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="990"
+     word_wrap="false">
+     3.9.0
+     </text>
+     <text
+     follows="top|left"
+     font="SansSerifSmall"
+     font_shadow="soft"
+     halign="left"
+     height="247"
+     top_pad="3"
+     left="7"
+     max_length="9999"
+     name="changelog_text"
+     bg_visible="false"
+     bg_writeable_color="Black_50" 
+     width="1200"
+     word_wrap="false">
+Added: Potato as Patreon Patron.
+Added: Sparklebottom Lasertits as Patreon Patron.
+Added: Narcissus as Patreon Patron.
+Added: Petrichor Store to login page.
+Added: Acid as Patreon Patron.
+Added: Mark Sommerset as Patreon Patron.
+Added: Vaelian Lionheart as Patreon Patron.
+Changed: Nils Woerner's patronage amount.
+Changed: Diego Cabral a Camara's patronage amount.
+Changed: Brought tooltips in Machinima Sidebar in sync with the new preferences tooltips.
+Changed: Max resolution for shadows to 8K in Machinima Sidebar to bring it in sync with preferences sliders.
+Changed: Disabled /p;PreferredToolArchitecture=x64 as its throwing a lot of unnecessary "was ignored" warnings.
+Changed: Version to 3.9.0 - Visualizing Dragon.
+Fixed: Viewer crash when switching water presets due to falsely loading them as sky presets.
+Fixed: bdfoateranimator.cpp/h missing from CMakeLists.
+Fixed: Longstanding issue with fmod.dll not getting copied.
+Fixed: Compile.
+Misc: Selectively port some changes from EEP's reflection render code.
+Merge Linden Release. (445 Changes)
+     </text>
+    </panel>
+   </scroll_container>
+  </layout_panel>
+ </layout_stack>
+ 
+ <panel
+ follows="top|right"
+ height="248"
+ background_visible="true"
+ bg_alpha_color="0.0 0.0 0.0 0.55"
+ layout="topleft"
+ left="643"
+ name="patreon_supports"
+ top="32"
+ width="327">
+  <text
+    follows="left|top|right"
+    font="SansSerifBig"
+    font_shadow="soft"
+    font.style="BOLD"
+    halign="left"
+    height="20"
+    top="4"
+    left="7"
+    name="store_list"
+    width="320"
+    word_wrap="true">
+    Patreon Supporting Shops:
+    </text>
+  <text
+    follows="left|top|right"
+    font_shadow="soft"
+    font.style="BOLD"
+    halign="left"
+    height="283"
+    top_pad="0"
+    left="7"
+    name="store_list"
+    width="320"
+    word_wrap="true">
+    Crazy Kobold Creations - [https://marketplace.secondlife.com/stores/38282 Marketplace] - [https://maps.secondlife.com/secondlife/Montecito%20Bay/55/171/723 Inworld Store]
+THIRST - [https://marketplace.secondlife.com/stores/153058 Marketplace] - [http://maps.secondlife.com/secondlife/The%20Boardwalk/219/49/30 Inworld Store]
+Luane's World - [https://marketplace.secondlife.com/stores/170473 Marketplace] - [https://maps.secondlife.com/secondlife/Slice%20of%20Heaven/83/132/30 Inworld Store]
+Vesta Corporation: Robotic Division - [https://maps.secondlife.com/secondlife/Horizons%20Mars/238/241/1401 Inworld Store]
+babyCo - [http://maps.secondlife.com/secondlife/Angel%20Eyes/59/123/26 Inworld Store]
+Thalia Heckroth - [https://marketplace.secondlife.com/stores/118124/ Marketplace] - [http://maps.secondlife.com/secondlife/Fingal/128/84/23 Inworld Store]
+Petrichor - [https://marketplace.secondlife.com/stores/25375 Marketplace] - [https://maps.secondlife.com/secondlife/Lune/82/219/1201 Inworld Store]
+FOXCITY - [https://marketplace.secondlife.com/stores/11069 Marketplace] - [https://maps.secondlife.com/secondlife/FOXCITY/180/69/21 Inworld Store]
+The Little Branch - [https://marketplace.secondlife.com/stores/160713 Marketplace] - [http://maps.secondlife.com/secondlife/Aspen%20Springs/99/88/21 Inworld Store]
+Aii The Ugly &amp; Beauitful - [http://maps.secondlife.com/secondlife/Aii%20and%20Ego/123/144/1521 Inworld Store]
+Cinphul - [https://marketplace.secondlife.com/stores/55081 Marketplce] - [http://maps.secondlife.com/secondlife/Barzakh/240/220/31 Inworld Store]
+PrimPossible 1 Prim Furniture - [https://marketplace.secondlife.com/stores/56262 Marketplace]
+ASA Studios - [https://marketplace.secondlife.com/stores/222823 Marketplace]
+Insomnia Angel - [https://maps.secondlife.com/secondlife/Cerberus%20Crossing/128/214/2027 Inworld Store]
+eBody REBORN - [http://maps.secondlife.com/secondlife/eBody/193/56/2002 Inworld Store]
+Enaitch - [https://marketplace.secondlife.com/fr-FR/stores/128031 Marketplace] - [http://maps.secondlife.com/secondlife/Enaitch/177/38/23 Inworld Store]
+Muraverse - [https://marketplace.secondlife.com/stores/242928 Marketplace] - [https://maps.secondlife.com/secondlife/Tuvali/213/186/38 Inworld Store]
+  </text>
+ </panel>
+ 
+ <panel
+ follows="top|right"
+ height="40"
+ background_visible="true"
+ bg_alpha_color="0.0 0.0 0.0 0.55"
+ layout="topleft"
+ left="643"
+ name="patreon_supports"
+ top_pad="10"
+ width="327">
+  <text
+    follows="left|top|right"
+    font="SansSerifBig"
+    font_shadow="soft"
+    font.style="BOLD"
+    halign="left"
+    height="20"
+    top="4"
+    left="7"
+    name="store_list"
+    width="320"
+    word_wrap="true">
+    Patreon Supporting Forums:
+    </text>
+  <text
+    follows="left|top|right"
+    font_shadow="soft"
+    font.style="BOLD"
+    halign="left"
+    height="200"
+    top_pad="0"
+    left="7"
+    name="store_list"
+    width="320"
+    word_wrap="true">
+    VirtualVerse.One Forum - [https://www.virtualverse.one/forums/ Forum  Link]
+  </text>
+ </panel>
+ 
+ <panel
+ follows="right|left|bottom"
+ height="150"
+ layout="topleft"
+ left="0"
+ name="panel_login2"
+ focus_root="true" 
+ bottom="-1"
+ width="996">
+  <layout_stack
+  border_size="0"
+  follows="all"
+  height="150"
+  layout="topleft"
+  left="0"
+  mouse_opaque="true"
+  name="root_stack"
+  orientation="horizontal"
+  top="0"
+  width="996">
+   <layout_panel
+   auto_resize="true"
+   follows="all"
+   height="120"
+   layout="topleft"
+   mouse_opaque="true"
+   name="info_panel"
+   top_pad="0"
+   width="200">
+    <button
+    follows="left|top"
+    height="18"
+    control_name="ShowChangelogs"
+    is_toggle="true"
+    image_unselected="Toolbar_Middle_Off"
+    image_selected="Toolbar_Middle_Selected"
+    label="Changelogs"
+    font="SansSerif"
+    font.style="BOLD"
+    layout="topleft"
+    left="1"
+    halign="center"
+    name="version_info_link"
+    top="17"
+    width="120"/>
+    <view_border
+    bevel_style="in"
+    follows="top|left|right"
+    height="1"
+    layout="topleft"
+    left_pad="1"
+    name="cost_text_border"
+    top="25"
+    width="78"/>
+   </layout_panel>
+   <layout_panel
+   auto_resize="false"
+   follows="all"
+   height="130"
+   layout="topleft"
+   mouse_opaque="true"
+   name="root_panel"
+   top_pad="0"
+   width="435">
+    <text
+    follows="left|top|right"
+    font="SansSerifBig"
+    font_shadow="soft"
+    font.style="BOLD"
+    halign="center"
+    height="20"
+    top="0"
+    left="0"
+    name="app_name_text"
+    width="420"
+    word_wrap="true">
+    [APP_NAME]
+    </text>
+    
+    <button
+    follows="left|top"
+    height="18"
+    image_overlay_alignment="left"
+    pad_bottom="0"
+    image_overlay="Command_Preferences_Icon"
+    image_unselected="Toolbar_Middle_Off"
+    image_selected="Toolbar_Middle_Selected"
+    label="Preferences"
+    is_toggle="false"
+    font="SansSerif"
+    font.style="BOLD"
+    label_color="1 1 1 0.7"
+    layout="topleft"
+    left="1"
+    halign="center"
+    name="pref_btn"
+    top="17"
+    width="136">
+    <button.commit_callback
+    function="Floater.Toggle"
+    parameter="preferences"/>
+    </button>
+    <button
+    follows="right|top"
+    height="18"
+    image_overlay_alignment="left"
+    pad_bottom="0"
+    image_overlay="Command_HowTo_Icon"
+    image_unselected="Toolbar_Middle_Off"
+    image_selected="Toolbar_Middle_Selected"
+    label="Grid Status"
+    font="SansSerif"
+    font.style="BOLD"
+    label_color="1 1 1 0.7"
+    layout="topleft"
+    left_pad="1"
+    halign="center"
+    name="grid_btn"
+    top_delta="0"
+    width="130">
+    <button.commit_callback
+    function="PromptShowURL"
+    parameter="WebLaunchExternalTarget,http://status.secondlifegrid.net/"/>
+    </button>
+    <combo_box
+    allow_text_entry="true"
+    follows="left|top"
+    height="18"
+    max_chars="256"
+    layout="topleft"
+    label="Select a Grid"
+    top_delta="0"
+    left_pad="1"
+    name="server_combo"
+    list_position="above"
+    width="165"
+    visible="true">
+    <combo_box.combo_editor
+    font="SansSerif"
+    font.style="BOLD"
+    font_shadow="soft"
+    text_tentative_color="0.7 0.7 0.7 0.7"
+    cursor_color="White"
+    text_color="0.75 0.75 0.75 0.7"
+    background_image="Toolbar_Middle_Off"
+    background_image_disabled="Toolbar_Middle_Selected"
+    background_image_focused="Toolbar_Middle_Off"/>
+    <combo_box.combo_button
+    scale_image="true"
+    image_overlay="R"
+    image_unselected="Toolbar_Middle_Dropdown_Off"
+    image_selected="Toolbar_Middle_Dropdown_Selected"
+    image_disabled="Toolbar_Middle_Dropdown_Off" />
+    <combo_box.combo_list
+    bg_writeable_color="Black_75"
+    background_visible="true"/>
+    </combo_box>
+    <combo_box
+    allow_text_entry="true"
+    follows="left|top"
+    height="22"
+    label="Username"
+    max_chars="128"
+    left="133"
+    tool_tip="The username you chose when you registered, like bobsmith12 or Steller Sunshine"
+    top_pad="12"
+    name="username_combo"
+    width="160">
+    <combo_box.combo_editor
+    background_image="TextField_Off"
+    background_image_disabled="TextField_Disabled"
+    background_image_focused="TextField_Active"/>
+    <combo_box.combo_button
+    image_unselected="ComboToolbarButton_Off"
+    image_selected="ComboToolbarButton_Selected"
+    image_pressed="ComboToolbarButton_Selected" 
+    image_pressed_selected="ComboToolbarButton_Selected"/>
+    <combo_box.drop_down_button
+    image_unselected="ComboToolbarButton_Off"
+    image_selected="ComboToolbarButton_Selected"
+    image_pressed="ComboToolbarButton_Selected" 
+    image_pressed_selected="ComboToolbarButton_Selected"
+    image_disabled="ComboToolbarButton_Disabled"/>
+    </combo_box>
+    <line_editor
+    follows="left|top"
+    commit_on_focus_lost="false"
+    height="22"
+    max_length_bytes="16"
+    name="password_edit"
+    label="Password"
+    is_password="true" 
+    select_on_focus="true"
+    left_delta="0"
+    top_pad="3"
+    width="152" />
+    <check_box
+    control_name="RememberUser"
+    follows="left|top"
+    left_pad="0"
+    top_delta="-25"
+    height="18"
+    label="Remember me"
+    name="remember_name"
+    tool_tip="Already remembered user can be forgotten from Me &gt; Preferences &gt; Advanced &gt; Remembered Usernames."
+    width="250" />
+  <check_box
+    control_name="RememberPassword"
+    follows="left|top"
+    height="18"
+    left_delta="0"
+    top_pad="6"
+    label="Remember password"
+    name="remember_password"
+    width="250" /> 
+    <combo_box
+    allow_text_entry="true"
+    control_name="NextLoginLocation"
+    follows="left|top"
+    height="23"
+    max_chars="128"
+    top_pad="8"
+    left="133"
+    name="start_location_combo"
+    width="160">
+    <combo_box.combo_editor
+    background_image="TextField_Off"
+    background_image_disabled="TextField_Disabled"
+    background_image_focused="TextField_Active"/>
+    <combo_box.item
+    label="My last location"
+    name="MyLastLocation"
+    value="last" />
+    <combo_box.item
+    label="My home"
+    name="MyHome"
+    value="home" />
+    <combo_box.combo_button
+    image_unselected="ComboToolbarButton_Off"
+    image_selected="ComboToolbarButton_Selected"
+    image_pressed="ComboToolbarButton_Selected" 
+    image_pressed_selected="ComboToolbarButton_Selected"/>
+    <combo_box.drop_down_button
+    image_unselected="ComboToolbarButton_Off"
+    image_selected="ComboToolbarButton_Selected"
+    image_pressed="ComboToolbarButton_Selected" 
+    image_pressed_selected="ComboToolbarButton_Selected"
+    image_disabled="ComboToolbarButton_Disabled"/>
+    </combo_box>
+    <button
+    follows="left|top"
+    height="23"
+    image_unselected="Toolbar_Middle_Off"
+    image_selected="Toolbar_Middle_Selected"
+    label="*LIFT OFF*"
+    font="SansSerif"
+    font.style="BOLDITALIC"
+    label_color="1 1 1 0.8"
+    layout="topleft"
+    left="133"
+    name="connect_btn"
+    top_pad="3"
+    width="152"/>
+    <icon
+    follows="top|left|right"
+    height="15"
+    image_name="Popup_Caution"
+    color="1 1 1 1"
+    layout="topleft"
+    name="intel_warning_icon1"
+    mouse_opaque="false"
+    visible="true"
+    width="16"
+    left_pad="2"
+    top_delta="3"/>
+    <icon
+    follows="top|left|right"
+    height="15"
+    image_name="Popup_Caution"
+    color="1 1 1 1"
+    layout="topleft"
+    name="intel_warning_icon2"
+    mouse_opaque="false"
+    visible="true"
+    width="16"
+    left_delta="-172"
+    top_delta="0"/>
+   </layout_panel>
+   <layout_panel
+   auto_resize="true"
+   follows="all"
+   height="100"
+   layout="topleft"
+   mouse_opaque="true"
+   name="help_panel"
+   top_pad="0"
+   width="200">
+    <view_border
+    bevel_style="in"
+    follows="top|left|right"
+    height="1"
+    layout="topleft"
+    left="0"
+    name="cost_text_border"
+    top="25"
+    width="120"/>
+    <button
+    follows="right|top"
+    height="18"
+    image_unselected="Toolbar_Middle_Off"
+    image_selected="Toolbar_Middle_Selected"
+    label="Quit"
+    font="SansSerif"
+    font.style="BOLD"
+    label_color="1 1 1 0.7"
+    layout="topleft"
+    left_pad="1"
+    halign="center"
+    name="quit_btn"
+    top_delta="-8"
+    width="77"/>
+   </layout_panel>
+  </layout_stack>
+  <icon
+  follows="top|left"
+  height="30"
+  image_name="FMOD_Logo"
+  color="1 1 1 0.85"
+  layout="topleft"
+  name="fmod_logo"
+  mouse_opaque="false"
+  visible="true"
+  width="120"
+  left="5"
+  top="-40"/>
+  <layout_stack
+  border_size="0"
+  follows="right|bottom"
+  height="150"
+  layout="topleft"
+  left="-165"
+  mouse_opaque="true"
+  name="root_stack"
+  orientation="horizontal"
+  top="105"
+  width="165">
+   <layout_panel
+   auto_resize="false"
+   follows="all"
+   height="40"
+   layout="topleft"
+   mouse_opaque="true"
+   name="info_panel"
+   top_pad="0"
+   width="40">
+    <button
+    follows="right|top"
+    height="36"
+    image_unselected="Discord_Icon"
+    image_selected="Discord_Icon"
+    label=""
+    font="SansSerif"
+    font.style="BOLD"
+    label_color="1 1 1 0.7"
+    tool_tip="Join the Discord Channel to share your pictures and ask for help or talk about all kinds of Second Life and Black Dragon related things!"
+    layout="topleft"
+    left="0"
+    halign="center"
+    name="discord_btn"
+    top="0"
+    width="36">
+    <button.commit_callback
+    function="Advanced.WebContentTest"
+    parameter="https://discord.gg/SucYaDC"/>
+    </button>
+   </layout_panel>
+   <layout_panel
+   auto_resize="false"
+   follows="all"
+   height="40"
+   layout="topleft"
+   mouse_opaque="true"
+   name="info_panel"
+   top_pad="0"
+   width="40">
+    <button
+    follows="right|top"
+    height="36"
+    image_unselected="Blogger_Icon"
+    image_selected="Blogger_Icon"
+    label=""
+    font="SansSerif"
+    font.style="BOLD"
+    label_color="1 1 1 0.7"
+    tool_tip="Follow me on the official Black Dragon blogger page to get the latest news and some helpful hints!"
+    layout="topleft"
+    left="0"
+    halign="center"
+    name="blogger_btn"
+    top="0"
+    width="36">
+    <button.commit_callback
+    function="Advanced.WebContentTest"
+    parameter="https://niranv-sl.blogspot.com/"/>
+    </button>
+   </layout_panel>
+   <layout_panel
+   auto_resize="false"
+   follows="all"
+   height="40"
+   layout="topleft"
+   mouse_opaque="true"
+   name="info_panel"
+   top_pad="0"
+   width="40">
+    <button
+    follows="right|top"
+    height="36"
+    image_unselected="Patreon_Icon"
+    image_selected="Patreon_Icon"
+    label=""
+    font="SansSerif"
+    font.style="BOLD"
+    label_color="1 1 1 0.7"
+    tool_tip="Become a Patron on Patreon!"
+    layout="topleft"
+    left="0"
+    halign="center"
+    name="patreon_btn"
+    top="0"
+    width="36">
+    <button.commit_callback
+    function="Advanced.WebContentTest"
+    parameter="https://www.patreon.com/niranvsl"/>
+    </button>
+   </layout_panel>
+   <layout_panel
+   auto_resize="false"
+   follows="all"
+   height="40"
+   layout="topleft"
+   mouse_opaque="true"
+   name="info_panel"
+   top_pad="0"
+   width="40">
+    <button
+    follows="right|top"
+    height="36"
+    image_unselected="Youtube_Icon"
+    image_selected="Youtube_Icon"
+    label=""
+    font="SansSerif"
+    font.style="BOLD"
+    label_color="1 1 1 0.7"
+    tool_tip="Follow me on Youtube and watch some awesome videos made with Black Dragon!"
+    layout="topleft"
+    left="0"
+    halign="center"
+    name="youtube_btn"
+    top="0"
+    width="36">
+    <button.commit_callback
+    function="Advanced.WebContentTest"
+    parameter="https://www.youtube.com/channel/UC2_6jAkf8rK2YiD8dg0zH6A?view_as=subscriber"/>
+    </button>
+   </layout_panel>
+  </layout_stack>
+ </panel>
+</panel>

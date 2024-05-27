@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<floater
+  positioning="cascading"
+  legacy_header_height="18"
+  can_resize="true"
+  height="400"
+  layout="topleft"
+  min_height="400"
+  min_width="400"
+  name="floater_search"
+  save_rect="true"
+  save_visibility="true"
+  title=""
+  width="560"
+  tab_stop="true"
+  filename="floater_web_content.xml"/>
